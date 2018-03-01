@@ -1,5 +1,5 @@
-{% set version = "0.2.4b0" %}
-{% set sha256 = "f6073cbb044ab1a1a3576df155de5a48153e83f73faeed48d5ad3e7e21ce2680" %}
+{% set version = "0.2.6" %}
+{% set sha256 = "a000076319285f05a8cf8988098cf3fcefcdbbc609765b45e2e86a0362ff096c" %}
 
 package:
   name: ipypivot

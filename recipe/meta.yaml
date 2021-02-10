@@ -1,5 +1,5 @@
-{% set version = "0.2.6" %}
-{% set sha256 = "a000076319285f05a8cf8988098cf3fcefcdbbc609765b45e2e86a0362ff096c" %}
+{% set version = "0.2.7" %}
+{% set sha256 = "9d711a673ce90243d9f62be099c4c85d7d2dff334673f4796e63b1b44ab29a92" %}
 
 package:
   name: ipypivot
@@ -11,20 +11,19 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1000
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  number: 0
+  noarch: python
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
-    build:
-        - python
+    host:
+        - python >=3.6
         - setuptools
-        - jupyter
+        - pip
     run:
-        - python
-        - ipywidgets >=7.0.0,<8.0
-        - traitlets >=4.3.0,<5.0
-        - traittypes >=0.0.6
-        - numpy >=1.10.4
+        - python >=3.6
+        - ipywidgets
+        - numpy
         - pandas
 
 test:
